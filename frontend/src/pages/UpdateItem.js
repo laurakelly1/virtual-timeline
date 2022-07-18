@@ -31,21 +31,15 @@ const UpdateItem = () => {
   };
 
   const handleSubmit = async () => {
-    axios.put("http://localhost:8000/api/items/" + id + "/").then(res => setEditItem(res.data))
+    let res = await axios.put("http://localhost:8000/api/items/" + id + "/", { 
+      name: editItem.name,
+      description: editItem.description,
+      date: editItem.date,
+    });
+    let data = res.data;
+    navigate("/item/" + data.id,);
+    };
 
-    // const requestOptions = {
-    //   method: "PUT",
-    //   headers: { "Content-Type": "application/json" },
-    //   body: JSON.stringify({
-    //     name: editItem.name,
-    //     description: editItem.description,
-    //     date: editItem.date,
-    //   }),
-    // };
-    // const response = await fetch("/api/items/" + id + "/", requestOptions);
-    // const data = await response.json();
-    navigate("/item/" + id);
-  };
 
   useEffect(() => {
     getItemDetails();
