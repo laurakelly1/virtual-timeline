@@ -7,6 +7,7 @@ import {
   FormControl,
 } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
+import axios from 'axios'
 
 
 const CreateItem = () => {
@@ -25,20 +26,16 @@ const CreateItem = () => {
   };
 
   // Need to be logged out of admin for this to work currently.
-  const handleSubmit = async () => {
-    const requestOptions = {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        name: newItem.name,
-        description: newItem.description,
-        date: newItem.date,
-      }),
-    };
-    const response = await fetch("/api/items/", requestOptions);
-    const data = await response.json();
+  const handleSubmit = async () => {   
+    let res = await axios.post("http://localhost:8000/api/items/", { 
+      name: newItem.name,
+      description: newItem.description,
+      date: newItem.date,
+    });
+    let data = res.data;
+    console.log(data);
     navigate("/item/" + data.id,);
-  };
+    };
 
   return (
     <Grid container spacing={1} className="center">

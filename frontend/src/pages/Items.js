@@ -7,7 +7,9 @@ const Items = () => {
   const [getItems, setGetItems] = useState([]);
 
   const getAllItems = async () => {
-    axios.get("http://localhost:8000/api/items/").then(res => setGetItems(res.data))
+    let res = await axios.get("http://localhost:8000/api/items/");
+    let data = res.data;
+    setGetItems(data);
   };
 
   useEffect(() => {

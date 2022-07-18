@@ -7,6 +7,7 @@ import {
 } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
+import axios from 'axios';
 
 const UpdateItem = () => {
   let navigate = useNavigate();
@@ -19,9 +20,7 @@ const UpdateItem = () => {
   });
 
   const getItemDetails = async () => {
-    const response = await fetch("/api/items/" + id);
-    const data = await response.json();
-    setEditItem(data);
+    axios.get("http://localhost:8000/api/items/" + id + "/").then(res => setEditItem(res.data))
   };
 
   const handleChange = (e) => {
@@ -32,17 +31,19 @@ const UpdateItem = () => {
   };
 
   const handleSubmit = async () => {
-    const requestOptions = {
-      method: "PUT",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        name: editItem.name,
-        description: editItem.description,
-        date: editItem.date,
-      }),
-    };
-    const response = await fetch("/api/items/" + id + "/", requestOptions);
-    const data = await response.json();
+    axios.put("http://localhost:8000/api/items/" + id + "/").then(res => setEditItem(res.data))
+
+    // const requestOptions = {
+    //   method: "PUT",
+    //   headers: { "Content-Type": "application/json" },
+    //   body: JSON.stringify({
+    //     name: editItem.name,
+    //     description: editItem.description,
+    //     date: editItem.date,
+    //   }),
+    // };
+    // const response = await fetch("/api/items/" + id + "/", requestOptions);
+    // const data = await response.json();
     navigate("/item/" + id);
   };
 
