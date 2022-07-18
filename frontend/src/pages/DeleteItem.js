@@ -5,7 +5,8 @@ import {
   } from "@mui/material";
   import React, { useEffect, useState } from "react";
   import { Link, useNavigate, useParams } from "react-router-dom";
-  
+  import axios from 'axios'
+
   const DeleteItem = () => {
     let navigate = useNavigate();
     const { id } = useParams();
@@ -17,16 +18,14 @@ import {
     });
   
     const getItemDetails = async () => {
-      const response = await fetch("/api/items/" + id);
-      const data = await response.json();
+      let res = await axios.get("http://localhost:8000/api/items/" + id + "/");
+      let data = res.data;
       setItem(data);
     };
   
     const handleSubmit = async () => {
-      const requestOptions = {
-        method: "DELETE",
-      };
-      await fetch("/api/items/" + id + "/", requestOptions);
+      let res = await axios.delete("http://localhost:8000/api/items/" + id + "/");
+      let data = res.data;
       navigate("/items");
     };
   
