@@ -1,6 +1,7 @@
 import { Button, Grid, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import axios from 'axios';
 
 const Item = () => {
   const { id } = useParams();
@@ -8,9 +9,7 @@ const Item = () => {
   const [item, setItem] = useState({});
 
   const getItemDetails = async () => {
-    const response = await fetch("/api/items/" + id);
-    const data = await response.json();
-    setItem(data);
+    axios.get("http://localhost:8000/api/items/" + id + "/").then(res => setItem(res.data))
   };
 
   useEffect(() => {
