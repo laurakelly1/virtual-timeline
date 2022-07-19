@@ -1,2 +1,2 @@
 release: python manage.py migrate
-web: guincorn virtual_timeline_app.wsgi.application
+web: guincorn virtual_timeline_app.wsgi --log-file -
