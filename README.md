@@ -15,7 +15,7 @@ See an elegent timeline of your events come to life in the Django-React app!
 
 ## Screenshots
 <p align="center">
-<img src=""/>
+<img src="https://github.com/laurakelly1/virtual-timeline/blob/main/src/images/Screen%20Shot%202022-07-19%20at%207.06.46%20pm.png?raw=true"/>
 </p>
 
 ## Getting Started
