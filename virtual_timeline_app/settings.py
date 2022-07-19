@@ -85,8 +85,8 @@ WSGI_APPLICATION = 'virtual_timeline_app.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'timeline',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': s.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
