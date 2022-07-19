@@ -19,8 +19,8 @@ const Item = () => {
   }, []);
 
   return (
-    <div className="center">
-      <Grid container spacing={1}>
+    <div className="center main">
+      <Grid container spacing={1} px={{ xs: 5, sm: 10 }} py={{ xs: 5, sm: 10 }}> 
         <Grid item xs={12} align="center">
           <Typography component="h4" variant="h4">
             {item.name}

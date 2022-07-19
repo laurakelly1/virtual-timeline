@@ -7,7 +7,11 @@ const text = blueGrey[800];
 
 const Footer = () => {
   return (
-    <footer>
+    <footer style={{
+      position: "inherit",
+      left: 0,
+      bottom: 0,
+      right: 0,}}>
         <Typography component="body1" variant="body1">
       <Box px={{ xs: 3, sm: 10 }} py={{ xs: 5, sm: 10 }}
             bgcolor={color} color={text}>

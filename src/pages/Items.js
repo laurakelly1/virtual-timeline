@@ -35,8 +35,8 @@ const Items = () => {
   };
 
   return (
-    <div className="center">
-    <Box sx={{ flexGrow: 1 }} >
+    <div className="center main">
+    <Box sx={{ flexGrow: 1 }} px={{ xs: 5, sm: 10 }} py={{ xs: 5, sm: 10 }}>
     <Grid container spacing={2}>
       <Grid item xs={12} align="center">
       <Typography component="h4" variant="h4">

@@ -46,8 +46,8 @@ const UpdateItem = () => {
   }, []);
 
   return (
-    <div>
-      <Grid container spacing={1} className="center">
+    <div className="main">
+      <Grid container spacing={1} className="center" px={{ xs: 5, sm: 10 }} py={{ xs: 5, sm: 10 }}>
         <Grid item xs={12} align="center">
           <Typography component="h4" variant="h4">
             Update Item

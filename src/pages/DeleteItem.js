@@ -34,7 +34,7 @@ import {
   
     return (
       <div>
-        <Grid container spacing={1} className="center">
+        <Grid container spacing={1} className="center main" px={{ xs: 5, sm: 10 }} py={{ xs: 5, sm: 10 }}> 
           <Grid item xs={12} align="center">
             <Typography component="h4" variant="h4">
               Are you sure you want to delete {item.name}?
