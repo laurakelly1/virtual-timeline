@@ -6,5 +6,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('backend.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
-    re_path('.*', TempleteView.as_view(template_name='index.html'))
+    re_path('.*', TemplateView.as_view(template_name='index.html'))
 ]
