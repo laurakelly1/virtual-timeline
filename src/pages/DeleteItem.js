@@ -24,8 +24,7 @@ import {
     };
   
     const handleSubmit = async () => {
-      let res = await axios.delete("http://localhost:8000/api/items/" + id + "/");
-      let data = res.data;
+      await axios.delete("http://localhost:8000/api/items/" + id + "/");
       navigate("/items");
     };
   

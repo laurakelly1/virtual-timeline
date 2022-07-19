@@ -7,8 +7,11 @@ const HomePage = () => {
     <Grid container spacing={1} className="center">
       <Grid item xs={12} align="center">
         <Typography component="h1" variant="h1">
-            Welcome
+            Timeline
         </Typography>
+        </Grid>
+        <Grid item xs={12} align="center">
+        <img style={{height: 300}} alt='timeline' src='https://cdn-icons-png.flaticon.com/512/4394/4394577.png'/>
         </Grid>
         <Grid item xs={12} align="center">
         <Button
