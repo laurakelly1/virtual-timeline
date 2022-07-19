@@ -20,7 +20,7 @@ const UpdateItem = () => {
   });
 
   const getItemDetails = async () => {
-    axios.get("http://localhost:8000/api/items/" + id + "/").then(res => setEditItem(res.data))
+    axios.get("https://virtual-timeline.herokuapp.com/api/items/" + id + "/").then(res => setEditItem(res.data))
   };
 
   const handleChange = (e) => {
@@ -31,7 +31,7 @@ const UpdateItem = () => {
   };
 
   const handleSubmit = async () => {
-    let res = await axios.put("http://localhost:8000/api/items/" + id + "/", { 
+    let res = await axios.put("https://virtual-timeline.herokuapp.com/api/items/" + id + "/", { 
       name: editItem.name,
       description: editItem.description,
       date: editItem.date,

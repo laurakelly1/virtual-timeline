@@ -9,7 +9,7 @@ const Item = () => {
   const [item, setItem] = useState({});
 
   const getItemDetails = async () => {
-    let res = await axios.get("http://localhost:8000/api/items/" + id + "/");
+    let res = await axios.get("https://virtual-timeline.herokuapp.com/api/items/" + id + "/");
     let data = res.data;
     setItem(data);
   };

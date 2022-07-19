@@ -18,13 +18,13 @@ import {
     });
   
     const getItemDetails = async () => {
-      let res = await axios.get("http://localhost:8000/api/items/" + id + "/");
+      let res = await axios.get("https://virtual-timeline.herokuapp.com/api/items/" + id + "/");
       let data = res.data;
       setItem(data);
     };
   
     const handleSubmit = async () => {
-      await axios.delete("http://localhost:8000/api/items/" + id + "/");
+      await axios.delete("https://virtual-timeline.herokuapp.com/api/items/" + id + "/");
       navigate("/items");
     };
   

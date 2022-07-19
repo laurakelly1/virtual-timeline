@@ -27,7 +27,7 @@ const CreateItem = () => {
 
   // Need to be logged out of admin for this to work currently.
   const handleSubmit = async () => {   
-    let res = await axios.post("http://localhost:8000/api/items/", { 
+    let res = await axios.post("https://virtual-timeline.herokuapp.com/api/items/", { 
       name: newItem.name,
       description: newItem.description,
       date: newItem.date,
