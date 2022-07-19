@@ -19,7 +19,7 @@ See an elegent timeline of your events come to life in the Django-React app!
 </p>
 
 ## Getting Started
-<a href="https://virtual-timeline.herokuapp.com/" target="_blank">Click here</a> to start recording your projects!
+<a href="https://virtual-timeline.herokuapp.com/" target="_blank">Click here</a> to start creating a timeline!
 
 ## Future Enhancements
 <li>Updates to visual display of timeline </li>
