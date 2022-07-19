@@ -43,7 +43,7 @@ const Item = () => {
             to={`/updateitem/${item.id}`}
             component={Link}
           >
-            Update Item!
+            Update Item
           </Button>
         </Grid>
         <Grid item xs={12} align="center">
