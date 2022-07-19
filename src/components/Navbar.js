@@ -43,13 +43,6 @@ const Navbar = () => {
             value="3"
             key="3"
           />
-          <Tab
-            label="Login"
-            to="/login"
-            component={Link}
-            value="4"
-            key="4"
-          />
         </Tabs>
       </Box>
     </Box>
