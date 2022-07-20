@@ -9,6 +9,8 @@ See an elegent timeline of your events come to life in the Django-React app!
 <li>PostgreSQL</li>
 <li>Node JS</li>
 <li>Material UI</li>
+<li>Axios</li>
+<li>Django Rest Framework</li>
 <li>HTML/CSS</li>
 <li>JavaScript</li>
 <li>Heroku</li>
