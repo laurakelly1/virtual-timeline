@@ -5,10 +5,10 @@ import DeleteItem from "../pages/DeleteItem";
 import HomePage from "../pages/HomePage";
 import Item from "../pages/Item";
 import Items from "../pages/Items";
+import Timeline from "../pages/Timeline";
 import UpdateItem from "../pages/UpdateItem";
 
 const Main = () => {
-
   return (
     <Routes>
       <Route exact path="/" element={<HomePage />} />
@@ -16,7 +16,8 @@ const Main = () => {
       <Route path="/item/:id" element={<Item />} />
       <Route path="/createitem" element={<CreateItem />} />
       <Route path="/updateitem/:id" element={<UpdateItem />} />
-      <Route path='/deleteitem/:id' element={<DeleteItem />} />
+      <Route path="/deleteitem/:id" element={<DeleteItem />} />
+      <Route path="/timeline" element={<Timeline />} />
     </Routes>
   );
 };

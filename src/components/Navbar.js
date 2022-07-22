@@ -30,6 +30,13 @@ const Navbar = () => {
         >
           <Tab label="Home" to="/" component={Link} value="1" key="1" />
           <Tab
+            label="Timeline"
+            to="/timeline"
+            component={Link}
+            value="4"
+            key="4"
+          />
+          <Tab
             label="Create Item"
             to="/createitem"
             component={Link}
@@ -43,6 +50,7 @@ const Navbar = () => {
             value="3"
             key="3"
           />
+          
         </Tabs>
       </Box>
     </Box>
