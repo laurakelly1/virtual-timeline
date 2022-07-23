@@ -1,7 +1,39 @@
 import { Grid, Typography } from "@mui/material";
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 
 const Timeline = () => {
+  const [getItems, setGetItems] = useState([]);
+
+  const getAllItems = async () => {
+    let res = await axios.get(
+      "https://virtual-timeline.herokuapp.com/api/items/"
+    );
+    let data = res.data;
+    setGetItems(data);
+  };
+
+  useEffect(() => {
+    getAllItems();
+  }, []);
+
+  const content = () => {
+    return (
+        getItems.map( item => 
+      <Grid item xs={12} align="center" className="container right">
+        <div className="content">
+          <Typography component="h5" variant="h5">
+            {item.name}
+          </Typography>
+          <Typography component="body1" variant="body1">
+            {item.description}
+          </Typography>
+        </div>
+      </Grid>
+        )
+    );
+  };
+
   return (
     <Grid
       container
@@ -15,6 +47,9 @@ const Timeline = () => {
           Timeline
         </Typography>
       </Grid>
+      <div className="timeline">
+        {content()}       
+      </div>
     </Grid>
   );
 };
