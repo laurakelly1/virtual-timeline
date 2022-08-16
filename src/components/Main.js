@@ -5,7 +5,7 @@ import DeleteItem from "../pages/DeleteItem";
 import HomePage from "../pages/HomePage";
 import Item from "../pages/Item";
 import Items from "../pages/Items";
-import Timeline from "../pages/Timeline";
+import TimeLine from "../pages/Timeline";
 import UpdateItem from "../pages/UpdateItem";
 
 const Main = () => {
@@ -17,7 +17,7 @@ const Main = () => {
       <Route path="/createitem" element={<CreateItem />} />
       <Route path="/updateitem/:id" element={<UpdateItem />} />
       <Route path="/deleteitem/:id" element={<DeleteItem />} />
-      <Route path="/timeline" element={<Timeline />} />
+      <Route path="/timeline" element={<TimeLine />} />
     </Routes>
   );
 };
