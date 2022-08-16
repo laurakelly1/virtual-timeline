@@ -10,7 +10,9 @@ const Timeline = () => {
       "https://virtual-timeline.herokuapp.com/api/items/"
     );
     let data = res.data;
-    setGetItems(data);
+    const sortedData = data.sort((a,b) => parseInt(a.date) - parseInt(b.date))
+    console.log(data)
+    setGetItems(sortedData);
   };
 
   useEffect(() => {
@@ -27,6 +29,10 @@ const Timeline = () => {
           </Typography>
           <Typography component="body1" variant="body1">
             {item.description}
+          </Typography>
+          <br/>
+          <Typography component="body1" variant="body1">
+            {item.date}
           </Typography>
         </div>
       </Grid>

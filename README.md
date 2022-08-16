@@ -26,4 +26,3 @@ See an elegent timeline of your events come to life in the Django-React app!
 ## Future Enhancements
 <li>Updates to visual display of timeline </li>
 <li>Allow user to see only their data </li>
-</ul>
